@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TGIF</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="d-flex justify-content-between spacing">
+            <img src="../images/tgif_logo.png" alt="image be broke yo">
+            <div class="brand">Transparent Government in Fact</div>
+            <a class="email" href="mailto:info@tgif.net"><i class="far fa-envelope"></i> info@tgif.net</a>
+        </div>
+
+        <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+            <a class="nav-size margin" href="home-page.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-size dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Congress 113
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <a class="dropdown-item active" href="#">Senate</a>
+                            <a class="dropdown-item" href="house-data.html?source=house">House</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-size dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Attendance
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <a class="dropdown-item" href="attendance-senate.html?source=senate&amp;attendance=true">Senate</a>
+                            <a class="dropdown-item" href="attendance-house.html?source=house&amp;attendance=true">House</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-size dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Party Loyalty
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                            <a class="dropdown-item" href="loyalty-senate.html?source=senate">Senate</a>
+                            <a class="dropdown-item" href="loyalty-house.html?source=house">House</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="mt-4 p-3">
+            <h2>Senators</h2>
+            <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The
+                Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal
+                executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.
+            </p>
+
+            <div class="filter-section">
+                <div class="">
+                    <div class="filter-header filter-name-spacing">Filter by Party:</div>
+
+                    <input class="filter-name-spacing" type="checkbox" id="democrat" name="democrat" value="">
+                    <label class="filter-name-spacing" for="democrat">Democrat</label>
+
+                    <input class="filter-name-spacing" type="checkbox" id="republican" name="republican" value="">
+                    <label class="filter-name-spacing" for="republican">Republican</label>
+
+                    <input class="filter-name-spacing" type="checkbox" id="independent" name="independent" value="">
+                    <label class="filter-name-spacing" for="independent">Independent</label>
+                </div>
+
+                <div class="">
+                    <div class="filter-header filter-name-spacing">Filter by State:</div>
+
+                    <select class="" name="statefilter" id="stateDropdown">
+                        <option selected value="" id="dropdownDefault">All States</option>
+                    </select>
+                </div>
+            </div>
+
+            <table id="senate-data" class="table">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Party Name</th>
+                        <th>State</th>
+                        <th>Seniority</th>
+                        <th>Percentage of Party Votes</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="loader"class="d-flex justify-content-center">
+                <div class="spinner-border text-info" role="status">
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+            <div>&copy; 2016 TGIF &verbar; All Rights Reserved</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../javascript/congress_members_overview.js"></script>
+
+</body>
+
+</html>
