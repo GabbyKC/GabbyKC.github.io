@@ -24,6 +24,12 @@ h1 {
     margin: auto;
 }
 
+@media screen and (max-device-width: 1024px) {
+    .intro {
+        min-width: 800px;
+    }
+}
+
 .headings {
     text-decoration: underline;
 }
