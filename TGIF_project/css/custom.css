@@ -72,3 +72,15 @@ img.float-right {
 .margin {
     margin-right: 10px;
 }
+
+@media screen and (max-device-width:768px) {
+    .container {
+        padding: 0;
+        max-width: 900px;
+    }
+
+    .brand {
+        align-self: flex-start;
+        font-size: 40px;
+    }
+}
