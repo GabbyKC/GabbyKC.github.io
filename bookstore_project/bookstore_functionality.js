@@ -10,6 +10,7 @@ fetch('https://api.myjson.com/bins/zyv02')
     })
     .catch(err => {
         console.log('oh snap, summit went wrong', err);
+        displayErrorMessage();
     });
 
 // function responseCallback() {
@@ -72,7 +73,7 @@ function createBookCards(books) {
     }
 }
 
-function searchBooks () {
+function searchBooks() {
     var searchedWord = document.getElementById("search").value;
     searchedWord = searchedWord.toLowerCase();
 
@@ -84,4 +85,13 @@ function searchBooks () {
             books[i].style.display = "none";
         }
     }
+}
+
+
+function displayErrorMessage() {
+    var container = document.getElementById("books-container");
+    var message = document.createElement("p");
+    var messageText = document.createTextNode('Uh oh... The server is down... Please try again later');
+    message.appendChild(messageText);
+    container.appendChild(message);
 }
