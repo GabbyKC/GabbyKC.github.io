@@ -53,3 +53,9 @@ section {
     font-style: italic;
     font-weight: bold;
 }
+
+@media (min-width: 768px) {
+    .fas {
+        display: contents!important;
+    }
+}
