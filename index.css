@@ -1,3 +1,6 @@
+/* TODO: figure out solution for android issue of resizing images when url bar disappears */
+
+
 @font-face {
     font-family: "Overpass";
     src: url('fonts/Overpass-Regular.ttf') format('truetype');
@@ -104,9 +107,6 @@ h3 {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
-    .hero-image {
-        background-attachment: scroll;
-    }
     .intro {
         font-size: 55px;
     }
