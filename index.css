@@ -101,6 +101,9 @@ h3 {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+    .hero-image {
+        background-attachment: scroll;
+    }
     .intro {
         font-size: 55px;
     }
@@ -108,12 +111,12 @@ h3 {
         font-size: 50px;
     }
     .section {
-        font-size: 30px;
+        font-size: 40px;
     }
     .projects-container {
         flex-direction: column;
     }
     .social-container {
-        font-size: 36px;
+        font-size: 45px;
     }
 }
