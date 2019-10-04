@@ -11,8 +11,8 @@ body, html {
     color: #053022;
     font-family: 'Overpass';
     overflow: hidden;
-    /* overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .hero-image {
