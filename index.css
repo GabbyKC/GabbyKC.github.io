@@ -10,6 +10,9 @@ body, html {
     margin: 0;
     color: #053022;
     font-family: 'Overpass';
+    /* overflow: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; */
 }
 
 .hero-image {
@@ -18,7 +21,7 @@ body, html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 60vh;
+    height: 60%;
 }
 
 .hero-text {
@@ -117,12 +120,6 @@ h3 {
     }
     .section-one-content {
         text-align: center;
-    }
-    .section-one-image {
-        height: 100vh;
-    }
-    .section-two-image {
-        height: 100vh;
     }
     .mobile-only {
         flex-direction: column-reverse;
