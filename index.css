@@ -1,61 +1,119 @@
-html {
-    background: linear-gradient(#aef2ef, #3dada8) no-repeat center center fixed;
+@font-face {
+    font-family: "Overpass";
+    src: url('fonts/Overpass-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    color: #053022;
+    font-family: 'Overpass';
+}
+
+.hero-image {
+    background: url('background_image.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: 'Quicksand', sans-serif;
+    height: 60%;
 }
 
-header {
-    margin-top: 30px;
+.hero-text {
+    text-align: center;
+    padding: 20px;
 }
 
 h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.title {
+    font-style: italic;
+}
+
+p {
+    margin-top: 0;
+}
+
+.section {
+    display: flex;
+    margin: 20px 0px;
+}
+
+h2 {
     text-align: center;
 }
 
-.flex {
+.section div {
+    flex: 1;
+    padding: 0px 20px;
+}
+
+.section-one-content {
+    background-color: #dcf7f3;
+    margin-right: 20px;
+}
+
+.section-two-content {
+    background-color: #dcf7f3;
+    margin-left: 20px;
+}
+
+.section-one-image {
+    background: url('section_one.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.section-two-image {
+    background: url('section_two.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.projects-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-.seuss {
-    font-style: italic;
+h3 {
+    margin-top: 0;
 }
 
-.content-container {
+.social-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
+    font-size: 28px;
+    background-color: #dcf7f3;
 }
 
-@media screen and (max-device-width: 1024px) {
-    .content-container {
-        justify-content: normal;
+.social-container a {
+    margin-right: 20px;
+    padding: 5px;
+    color: #053022;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+    .intro {
+        font-size: 55px;
     }
-}
-
-section {
-    padding: 0px 50px;
-}
-
-.boxes {
-    margin: 10px 50px;
-}
-
-.headings {
-    text-decoration: underline;
-}
-
-.projects {
-    font-style: italic;
-    font-weight: bold;
-}
-
-@media (min-width: 768px) {
-    .fas {
-        display: contents!important;
+    .title {
+        font-size: 50px;
+    }
+    .section {
+        font-size: 30px;
+    }
+    .projects-container {
+        flex-direction: column;
+    }
+    .social-container {
+        font-size: 36px;
     }
 }
