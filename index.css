@@ -1,6 +1,3 @@
-/* TODO: figure out solution for android issue of resizing images when url bar disappears */
-
-
 @font-face {
     font-family: "Overpass";
     src: url('fonts/Overpass-Regular.ttf') format('truetype');
@@ -13,9 +10,8 @@ body, html {
     margin: 0;
     color: #053022;
     font-family: 'Overpass';
-    /* overflow: hidden;
+    overflow: hidden;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; */
 }
 
 .hero-image {
@@ -25,6 +21,7 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
     height: 60%;
+    -webkit-transform: translate3d(0,0,0); /* added to improve scroll performance on chrome - android */
 }
 
 .hero-text {
@@ -75,6 +72,7 @@ h2 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    -webkit-transform: translate3d(0,0,0); /* added to improve scroll performance on chrome - android */
 }
 
 .section-two-image {
@@ -83,6 +81,7 @@ h2 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    -webkit-transform: translate3d(0,0,0); /* added to improve scroll performance on chrome - android */
 }
 
 .projects-container {
@@ -107,6 +106,9 @@ h3 {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+    .hero-image {
+       background-attachment: scroll; /*IOS fix for hero image */
+   }
     .intro {
         font-size: 55px;
     }
