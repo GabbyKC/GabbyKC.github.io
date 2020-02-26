@@ -9,94 +9,79 @@ body, html {
     height: 100%;
     margin: 0;
     color: #053022;
-    font-family: 'Overpass';
+    font-family: 'Overpass', sans-serif;
     overflow: hidden;
     overflow-y: scroll;
 }
 
 .hero-image {
-    background: url('background_image.jpg') no-repeat center center fixed;
+    background: url('background_image3.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 60%;
-    -webkit-transform: translate3d(0,0,0); /* added to improve scroll performance on chrome - android */
+    -webkit-transform: translate3d(0, 0, 0); /* added to improve scroll performance on chrome - android */
 }
 
 .hero-text {
     text-align: center;
     padding: 20px;
-}
-
-h1 {
     margin: 0;
     font-size: 36px;
 }
 
-.title {
-    font-style: italic;
+.section-container {
+    background-color: #dcf7f3;
+    margin: 20px 0;
+    padding: 10px 0;
 }
 
-p {
-    margin-top: 0;
-}
-
-.section {
-    display: flex;
-    margin: 20px 0px;
-}
-
-h2 {
+.section-container h2 {
     text-align: center;
+    margin: 0 0 30px 0;
 }
 
-.section div {
-    flex: 1;
-    padding: 0px 10px;
+.section-container p {
+    margin-top: 0;
 }
 
 .section-one-content {
-    background-color: #dcf7f3;
-    margin-right: 20px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.no-bottom-margin {
+    margin-bottom: 0;
 }
 
 .section-two-content {
-    background-color: #dcf7f3;
-    margin-left: 20px;
+    width: 60%;
+    margin: auto;
 }
 
-.section-one-image {
-    background: url('section_one.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-transform: translate3d(0,0,0); /* added to improve scroll performance on chrome - android */
-}
-
-.section-two-image {
-    background: url('section_two.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-transform: translate3d(0,0,0); /* added to improve scroll performance on chrome - android */
-}
-
-.projects-container {
-    display: flex;
-}
-
-h3 {
+.section-two-content h3 {
     margin-top: 0;
+}
+
+.section-two-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-two-inner ul {
+    padding: 0;
+}
+
+.section-two-inner ul li {
+    padding-bottom: 10px;
 }
 
 .social-container {
     display: flex;
     justify-content: flex-end;
     font-size: 28px;
-    background-color: #dcf7f3;
 }
 
 .social-container a {
@@ -107,28 +92,36 @@ h3 {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
     .hero-image {
-       background-attachment: scroll; /*IOS fix for hero image */
-   }
-    .intro {
+        background-attachment: scroll; /*IOS fix for hero image */
+        height: 40%;
+    }
+
+    .hero-text {
         font-size: 55px;
     }
-    .title {
-        font-size: 50px;
-    }
-    .section {
-        flex-direction: column;
-        height: 100vh;
-        font-size: 40px;
+
+    .section-container {
+        padding: 30px 0;
     }
     .section-one-content {
-        text-align: center;
+        width: 80%;
     }
-    .mobile-only {
-        flex-direction: column-reverse;
+
+    .section-two-content {
+        width: 80%;
     }
-    .projects-container {
+
+    .section-two-inner {
         flex-direction: column;
     }
+
+    .section-two-inner div:first-of-type {
+        margin-bottom: 20px;
+    }
+    .section-two-inner ul li {
+        padding-bottom: 20px;
+    }
+
     .social-container {
         font-size: 55px;
     }
