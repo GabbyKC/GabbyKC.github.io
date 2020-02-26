@@ -70,6 +70,10 @@ body, html {
     justify-content: space-between;
 }
 
+.section-two-inner a {
+    color: #053022;
+}
+
 .section-two-inner ul {
     padding: 0;
 }
@@ -103,6 +107,7 @@ body, html {
     .section-container {
         padding: 30px 0;
     }
+
     .section-one-content {
         width: 80%;
     }
@@ -118,6 +123,7 @@ body, html {
     .section-two-inner div:first-of-type {
         margin-bottom: 20px;
     }
+
     .section-two-inner ul li {
         padding-bottom: 20px;
     }
