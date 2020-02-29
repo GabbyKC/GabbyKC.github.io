@@ -20,7 +20,7 @@ body, html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 60%;
+    height: 45%;
     -webkit-transform: translate3d(0, 0, 0); /* added to improve scroll performance on chrome - android */
 }
 
@@ -94,7 +94,7 @@ body, html {
     color: #053022;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .hero-image {
         background-attachment: scroll; /*IOS fix for hero image */
         height: 40%;
