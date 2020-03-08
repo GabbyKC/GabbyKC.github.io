@@ -119,10 +119,15 @@ body, html {
 
     .section-two-inner {
         flex-direction: column;
+        text-align: center;
     }
 
     .section-two-inner div:first-of-type {
         margin-bottom: 20px;
+    }
+
+    .section-two-inner ul {
+        list-style: none;
     }
 
     .section-two-inner ul li {
