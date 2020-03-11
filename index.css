@@ -57,9 +57,10 @@ a:hover {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px ) {
     html {
-        background-attachment:initial;
+        /*fix for ios mobile*/
+        background-attachment: initial;
     }
-    
+
     article h1 {
         font-size: 8em;
     }
