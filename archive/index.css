@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Overpass";
+    src: url('fonts/Overpass-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    color: #053022;
+    font-family: 'Overpass', sans-serif;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.hero-image {
+    background: url('background_image3.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 45%;
+    -webkit-transform: translate3d(0, 0, 0); /* added to improve scroll performance on chrome - android */
+}
+
+.hero-text {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 36px;
+}
+
+.section-container {
+    background-color: #dcf7f3;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+
+.section-container h2 {
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.section-container p {
+    margin-top: 0;
+}
+
+.section-one-content {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.no-bottom-margin {
+    margin-bottom: 0;
+}
+
+.section-two-content {
+    width: 60%;
+    margin: auto;
+}
+
+.section-two-content h3 {
+    margin-top: 0;
+}
+
+.section-two-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-two-inner a {
+    color: #053022;
+}
+
+.section-two-inner ul {
+    padding: 0;
+}
+
+.section-two-inner ul li {
+    padding-bottom: 10px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 28px;
+}
+
+.social-container a {
+    margin-right: 20px;
+    padding: 5px;
+    color: #053022;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .hero-image {
+        background-attachment: scroll; /*IOS fix for hero image */
+        height: 40%;
+    }
+
+    .hero-text {
+        font-size: 55px;
+    }
+
+    .section-container {
+        padding: 30px 0;
+        font-size: 35px;
+    }
+
+    .section-one-content {
+        width: 80%;
+    }
+
+    .section-two-content {
+        width: 80%;
+    }
+
+    .section-two-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-two-inner div:first-of-type {
+        margin-bottom: 20px;
+    }
+
+    .section-two-inner ul {
+        list-style: none;
+    }
+
+    .section-two-inner ul li {
+        padding-bottom: 20px;
+    }
+
+    .social-container {
+        font-size: 80px;
+        justify-content: space-around;
+    }
+}

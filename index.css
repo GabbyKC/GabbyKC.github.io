@@ -1,141 +1,91 @@
-@font-face {
-    font-family: "Overpass";
-    src: url('fonts/Overpass-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-body, html {
-    height: 100%;
+html, body {
     margin: 0;
-    color: #053022;
-    font-family: 'Overpass', sans-serif;
-    overflow: hidden;
-    overflow-y: scroll;
+    padding: 0;
 }
 
-.hero-image {
-    background: url('background_image3.jpg') no-repeat center center fixed;
+html {
+    background: url('background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 45%;
-    -webkit-transform: translate3d(0, 0, 0); /* added to improve scroll performance on chrome - android */
+    font-family: Verdana, Geneva, sans-serif;
 }
 
-.hero-text {
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px;
+    min-height: 100vh;
+}
+
+article h1 {
+    font-size: 5em;
+    font-weight: normal;
     margin: 0;
-    font-size: 36px;
 }
 
-.section-container {
-    background-color: #dcf7f3;
-    margin: 20px 0;
-    padding: 10px 0;
+article p {
+    font-size: 1.4em;
+    text-align: left;
 }
 
-.section-container h2 {
-    text-align: center;
-    margin: 0 0 30px 0;
+.link-container {
+    margin-top: 35px;
+    text-align: left;
 }
 
-.section-container p {
-    margin-top: 0;
+a {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
 }
 
-.section-one-content {
-    text-align: center;
-    width: 60%;
-    margin: auto;
+a:first-of-type {
+    margin-right: 30px;
 }
 
-.no-bottom-margin {
-    margin-bottom: 0;
+a:hover {
+    background-color: #d6d6d6;
 }
 
-.section-two-content {
-    width: 60%;
-    margin: auto;
-}
-
-.section-two-content h3 {
-    margin-top: 0;
-}
-
-.section-two-inner {
-    display: flex;
-    justify-content: space-between;
-}
-
-.section-two-inner a {
-    color: #053022;
-}
-
-.section-two-inner ul {
-    padding: 0;
-}
-
-.section-two-inner ul li {
-    padding-bottom: 10px;
-}
-
-.social-container {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 28px;
-}
-
-.social-container a {
-    margin-right: 20px;
-    padding: 5px;
-    color: #053022;
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-    .hero-image {
-        background-attachment: scroll; /*IOS fix for hero image */
-        height: 40%;
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px ) {
+    article h1 {
+        font-size: 8em;
     }
 
-    .hero-text {
-        font-size: 55px;
-    }
-
-    .section-container {
-        padding: 30px 0;
-        font-size: 35px;
-    }
-
-    .section-one-content {
-        width: 80%;
-    }
-
-    .section-two-content {
-        width: 80%;
-    }
-
-    .section-two-inner {
-        flex-direction: column;
+    article p {
+        font-size: 4em;
         text-align: center;
     }
 
-    .section-two-inner div:first-of-type {
-        margin-bottom: 20px;
+    .link-container {
+        text-align: center;
+        font-size: 2.2em;
+        margin-top: 100px;
     }
 
-    .section-two-inner ul {
-        list-style: none;
+    a {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    article h1 {
+        font-size: 4em;
     }
 
-    .section-two-inner ul li {
-        padding-bottom: 20px;
+    article p {
+        text-align: center;
     }
 
-    .social-container {
-        font-size: 80px;
-        justify-content: space-around;
+    .link-container {
+        text-align: center;
     }
 }
