@@ -3,61 +3,58 @@ html, body {
     padding: 0;
 }
 
-html {
+body {
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    color: #600835;
+}
+
+main {
     background: url('background-min.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: Verdana, Geneva, sans-serif;
-}
-
-main {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
     min-height: 100vh;
 }
 
 article {
-    margin-top: 7rem;
+    margin: 4rem auto 0 auto;
+    width: 80%;
 }
 
 article h1 {
-    font-size: 5em;
-    font-weight: normal;
-    margin: 0;
+    font-size: 2rem;
 }
 
 .content-container {
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
-    align-items: baseline;
 }
 
-i {
-    margin-right: 1rem;
+.quote-icon-container {
+    width: 10%;
+    min-width: 30px;
+    max-width: 40px;
+}
+
+.quote-container {
+    width: 90%;
 }
 
 .quote {
-    font-size: 1.4em;
-    text-align: left;
-    margin-top: 2rem;
-    margin-bottom: 0;
+    margin: 0;
     font-style: italic;
+    font-size: 1.25rem;
 }
 
 .author {
-    font-size: 1rem;
-    margin: .5rem 0;
-    opacity: 0.5;
-    text-align: left;
+    opacity: 0.8;
 }
 
 .link-container {
-    margin-top: 55px;
-    text-align: left;
+    margin-top: 2rem;
 }
 
 a {
@@ -66,64 +63,35 @@ a {
     border-radius: 4px;
     padding: 10px;
     text-decoration: none;
-    font-size: 1.2em;
-    color: black;
+    /*font-size: 1.2em;*/
+    color: #600835;
+    font-weight: bold;
 }
 
 a:first-of-type {
-    margin-right: 30px;
+    margin-right: 1rem;
 }
 
 a:hover {
     background-color: #d6d6d6;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 760px ) {
-    html {
-        /*fix for ios mobile*/
-        background-attachment: initial;
+@media (min-width: 700px) {
+    article {
+        width: 65%;
+        max-width: 600px;
     }
 
     article h1 {
-        font-size: 8em;
+        font-size: 3rem;
     }
 
-    .content-container {
-        width: 80%;
-        margin: 3rem auto 0 auto;
+    .content-container i {
+        font-size: 1.5rem;
     }
 
     .quote {
-        font-size: 3em;
-        text-align: center;
-    }
-
-    .author {
-        text-align: center;
-        font-size: 2rem;
-    }
-
-    .link-container {
-        text-align: center;
-        font-size: 2.2em;
-        margin-top: 100px;
-    }
-
-    a {
-        padding: 20px;
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 800px) {
-    article h1 {
-        font-size: 4em;
-    }
-
-    article p {
-        text-align: center;
-    }
-
-    .link-container {
-        text-align: center;
-    }
-}
